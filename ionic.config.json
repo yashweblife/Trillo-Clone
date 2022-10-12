@@ -1,0 +1,7 @@
+{
+  "name": "trillo-clone",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
