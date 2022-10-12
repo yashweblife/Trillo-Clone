@@ -1,5 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import { IonContent, IonHeader, IonItem, IonLabel, IonPage, IonReorder, IonReorderGroup, IonTitle, IonToolbar, ItemReorderEventDetail } from '@ionic/react';
 import './Home.css';
 
 const Home: React.FC = () => {
@@ -11,12 +10,18 @@ const Home: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer />
+        <IonReorderGroup disabled={false}>
+          <IonReorder>
+            <IonItem>
+              <IonLabel>T1</IonLabel>
+            </IonItem>
+          </IonReorder>
+          <IonReorder>
+            <IonItem>
+              <IonLabel>T2</IonLabel>
+            </IonItem>
+          </IonReorder>
+        </IonReorderGroup>
       </IonContent>
     </IonPage>
   );
